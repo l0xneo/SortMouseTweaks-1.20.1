@@ -5,3 +5,4 @@ run/
 *.iml
 *.jar
 !gradle-wrapper.jar
+build.log
