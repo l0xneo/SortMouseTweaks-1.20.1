@@ -43,7 +43,7 @@ class SortWidget extends Button {
         }
         int x = getX();
         int y = getY();
-        boolean hot = isHoveredOrFocused();
+        boolean hot = isHovered();
         boolean down = hot && isMouseOver(mouseX, mouseY) && Minecraft.getInstance().mouseHandler.isLeftPressed();
         g.fill(x, y, x + SIZE, y + SIZE, 0xFF101418);
         g.fillGradient(x + 1, y + 1, x + SIZE - 1, y + SIZE - 1, hot ? 0xFF4FA3E0 : 0xFF3A4A5C, hot ? 0xFF2C6FA8 : 0xFF243140);
