@@ -89,14 +89,16 @@ public final class ClientEvents {
         Component sortTip = Component.translatable(inventory ? "sortmousetweaks.sort_inventory" : "sortmousetweaks.sort_container");
         event.addListener(new SortWidget(screen, x, y, () -> Component.literal("S"), () -> sortTip,
                 b -> SortMouseTweaks.CHANNEL.sendToServer(new MsgSort(screen.getMenu().containerId, inventory, ClientConfig.MODE.get()))));
-        event.addListener(new SortWidget(screen, modeX, y,
+        SortWidget mode = new SortWidget(screen, modeX, y,
                 () -> Component.translatable("sortmousetweaks.mode." + name() + ".short"),
                 () -> Component.translatable("sortmousetweaks.mode." + name()),
                 b -> {
                     Sorter.Mode[] modes = Sorter.Mode.values();
                     ClientConfig.MODE.set(modes[(ClientConfig.MODE.get().ordinal() + 1) % modes.length]);
                     ClientConfig.MODE.save();
-                }));
+                });
+        mode.setTooltipDelay(750);
+        event.addListener(mode);
     }
 
     private static String name() {
