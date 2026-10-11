@@ -1,0 +1,17 @@
+{
+  "sortmousetweaks.sort_container": "Sort this container",
+  "sortmousetweaks.sort_inventory": "Sort your inventory (not the hotbar)",
+  "sortmousetweaks.take_all": "Take everything",
+  "sortmousetweaks.restock": "Restock: fill up the stacks you carry",
+  "sortmousetweaks.deposit_all": "Put your inventory in (not the hotbar)",
+  "sortmousetweaks.mode.groups": "Groups",
+  "sortmousetweaks.mode.groups.short": "G",
+  "sortmousetweaks.mode.type": "Type",
+  "sortmousetweaks.mode.type.short": "T",
+  "sortmousetweaks.mode.name": "Name",
+  "sortmousetweaks.mode.name.short": "A",
+  "sortmousetweaks.mode.id": "ID",
+  "sortmousetweaks.mode.id.short": "I",
+  "sortmousetweaks.mode.count": "Amount",
+  "sortmousetweaks.mode.count.short": "#"
+}

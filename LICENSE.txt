@@ -1,0 +1,14 @@
+Sort & Mouse Tweaks
+Copyright (C) 2026 Neo. All rights reserved.
+
+You may use and share this mod, unmodified, as long as you give credit to Neo and link to
+https://github.com/l0xneo/SortMouseTweaks-1.20.1. This includes modpacks.
+
+You may not, without written permission:
+- modify, decompile, or create derivative works of this mod or its source code
+- share a modified version of this mod or its source code
+- share it without credit
+
+The source code is public for viewing only. No license is granted except as stated above.
+
+THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
