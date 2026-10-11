@@ -43,10 +43,14 @@ class SortWidget extends Button {
         }
         int x = getX();
         int y = getY();
-        g.fill(x, y, x + SIZE, y + SIZE, isHoveredOrFocused() ? 0xB08B8B8B : 0x706B6B6B);
-        g.renderOutline(x, y, SIZE, SIZE, isHoveredOrFocused() ? 0xC0373737 : 0x80373737);
+        boolean hot = isHoveredOrFocused();
+        boolean down = hot && isMouseOver(mouseX, mouseY) && Minecraft.getInstance().mouseHandler.isLeftPressed();
+        g.fill(x, y, x + SIZE, y + SIZE, 0xFF101418);
+        g.fillGradient(x + 1, y + 1, x + SIZE - 1, y + SIZE - 1, hot ? 0xFF4FA3E0 : 0xFF3A4A5C, hot ? 0xFF2C6FA8 : 0xFF243140);
+        g.fill(x + 1, y + 1, x + SIZE - 1, y + 2, down ? 0x40000000 : 0x60FFFFFF);
+        g.fill(x + 1, y + SIZE - 2, x + SIZE - 1, y + SIZE - 1, down ? 0x30FFFFFF : 0x50000000);
         Font font = Minecraft.getInstance().font;
 
-        g.drawString(font, getMessage(), x + (SIZE - font.width(getMessage()) + 1) / 2, y + 2, isHoveredOrFocused() ? 0xFFFFFFFF : 0xB0FFFFFF);
+        g.drawString(font, getMessage(), x + (SIZE - font.width(getMessage()) + 1) / 2, y + (down ? 3 : 2), hot ? 0xFFFFFFFF : 0xFFD8E2EC, true);
     }
 }
